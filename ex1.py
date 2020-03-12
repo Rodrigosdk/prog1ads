@@ -11,8 +11,7 @@ while True:
     try:
         # Capitura as entradas do usuário
         ask_liter = float(input("Insira o valor do litro da gasolina: "))
-        ask_value = float(
-            input("Insira o valor de quanto deseja abasticer: "))
+        ask_value = float(input("Insira o valor de quanto deseja abasticer: "))
 
         # Calcular a quantidades de litros
         cal = ask_value/ask_liter
@@ -41,4 +40,14 @@ while True:
 
         # Canselar o loop
         break
-    
+
+    except(ZeroDivisionError):
+        # Limpar a tela
+        os.system("clear")
+
+        print("="*80)
+
+        # Mostra mensagem de erro em cor vermelha e centralizado
+        print("{}Erro: o valor da gasulina não pode ser 0{}".format(
+            '\033[31m', '\033[m').center(80))
+        print("="*80)
