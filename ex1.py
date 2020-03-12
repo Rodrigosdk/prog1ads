@@ -41,3 +41,4 @@ while True:
 
         # Canselar o loop
         break
+    
