@@ -16,9 +16,6 @@ import os
 while True:
     try:
         # Capitura as entradas do usuário
-        date = int(input("Insira um numero: "))
-
-        # variáveis
         note_1 = float(input('Informe primeira nota: '))
         note_2 = float(input('Informe a segunda nota: '))
 
