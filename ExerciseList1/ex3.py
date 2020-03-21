@@ -1,5 +1,6 @@
 '''
-3- Calcule a área de um retângulo
+3-
+Calcule a área de um retângulo
 '''
 
 # Capitura as entradas do usuário

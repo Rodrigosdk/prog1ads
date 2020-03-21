@@ -1,5 +1,5 @@
 '''
-6 - Escreva um programa que leia um valor inteiro e calcule o seu quadrado.
+6 - Escreva um programa que leia um valor inteiro e calcule o seu quadrado. 
 '''
 
 # Capitura as entradas do usuário

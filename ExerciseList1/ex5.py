@@ -1,5 +1,5 @@
 '''
-5 - Escreva um programa que leia uma temperatura em graus Fahrenheit, transforme-a em graus 
+5 - Escreva um programa que leia uma temperatura em graus Fahrenheit, transforme-a em graus  
 Celsius e exiba o resultado.
 '''
 

@@ -1,6 +1,6 @@
 '''
 8 -Escreva um programa que converte valores de polegadas em centímetros utilizando a seguinte fórmula:
-1 polegada = 2,54cm;
+1 polegada = 2,54cm; 
 '''
 
 # Capitura as entradas do usuário

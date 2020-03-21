@@ -1,5 +1,5 @@
 '''
-9 - Escreva um programa que converta valores de centímetros em polegadas
+9 - Escreva um programa que converta valores de centímetros em polegadas 
 '''
 
 # Capitura as entradas do usuário

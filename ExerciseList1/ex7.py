@@ -1,5 +1,5 @@
 '''
-6 - Escreva um programa que leia um valor inteiro e calcule o seu cubo.
+6- Escreva um programa que leia um valor inteiro e calcule o seu cubo.
 '''
 
 # Capitura as entradas do usuário
