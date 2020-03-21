@@ -29,7 +29,7 @@ while True:
             print(f"o valor do aumento: R${value_salary * 20/100}")
             print(f"Novo salário: R${cal}")
 
-        elif value_salary >= 280 and value_salary <= 700:
+        elif value_salary > 280 and value_salary <= 700:
             # Calcula o novo valor do salário
             cal = value_salary + (value_salary * 15/100)
 
@@ -39,7 +39,7 @@ while True:
             print(f"o valor do aumento: R${value_salary * 15/100}")
             print(f"Novo salário: R${cal}")
 
-        elif value_salary >= 700 and value_salary <= 1500:
+        elif value_salary > 700 and value_salary <= 1500:
             # Calcula o novo valor do salário
             cal = value_salary + (value_salary * 10/100)
 
@@ -49,7 +49,7 @@ while True:
             print(f"o valor do aumento: R${value_salary * 10/100}")
             print(f"Novo salário: R${cal}")
 
-        elif value_salary <= 1500:
+        elif value_salary < 1500:
             # Calcula o novo valor do salário
             cal = value_salary + (value_salary * 5/100)
 
