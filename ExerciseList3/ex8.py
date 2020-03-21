@@ -1,57 +1,28 @@
 '''
-
-6 - Faça um Programa que peça um número correspondente a um determinado ano e em seguida informe se 
-este ano é ou não bissexto
+8 - Faça um programa que pergunte o preço de três produtos
+e informe qual produto você deve comprar,
+sabendo que a decisão é sempre pelo mais barato.
 '''
-import os
 
-validade = "true"
-i = 0
+#variáveis
+prod_1 = float(input('Informe o primeiro preço? R$ '))
+prod_2 = float(input('Qual o segundo preço? R$ '))
+prod_3 = float(input('Qual o terceiro preço? R$ '))
 
-while validade == "true" and i == 0:
-    try:
-        # Capitura as entradas do usuário
-        date = input("Insira uma data: ")
-        
-        day = int(date[0:2])
-        month = int(date[3:5])
-        year = int(date[6:10])
-    # Tratamento de erros com valor de argumento inadequado
-    except (ValueError):
-        # Limpar a tela
-        os.system("clear")
+#comparando os preços 1ª, 2ª e 3ª informando o mais barato a ser comprado
 
-        print("="*80)
-
-        # Mostra mensagem de erro em cor vermelha e centralizado
-        print("{}Erro: Erro: só é permitido números e pontos {}".format(
-            '\033[31m', '\033[m').center(80))
-        print("="*80)
-
-    # Tratamento de erro de interupção
-    except(KeyboardInterrupt, EOFError):
-
-        # Limpar a telar
-        os.system("clear") or None
-
-        # Canselar o loop
-        break
-    if (year%4 == 0 and year%100!= 0) or year%400 == 0:
-        bissexto = "sim"
-    else:
-        bissexto = "nao"
-
-    if month < 1 or month > 12:
-        validade = "false"
-
-    elif day > 31 or ((month == 4 or month == 6 or month == 9 or month == 11) and day > 30):
-        validade = "false"
-
-    elif (month == 2 and bissexto == "nao" and day > 28) or ( month == 2 and bissexto == "sim" and day > 29):
-        validade = "false"
-
-if validade == "true":
-    print("data valida")
+if prod_1 == prod_2 == prod_3:
+    print('Todos os preços são iguais!!')
 else:
-    print("data invalida")
-
+    if prod_1 < prod_2 < prod_3:
+        print('O produto 1 é os mais baratos!!')
+    elif prod_1 == prod_2 < prod_3:
+        print('O produto 1 e 2 são os mais baratos!!')
+    elif prod_1 == prod_3 < prod_2:
+        print('O produto 1 e 3 são os mais baratos!!')
+    if prod_2 < prod_1 < prod_3:
+        print('O produto 2 é os mais baratos!!')
+    elif prod_2 == prod_3 < prod_1:
+        print('O produto 2 e 3 são os mais baratos!!')
+    if prod_3 < prod_2 < prod_1:
+        print('O produto 3 é os mais baratos!!')
