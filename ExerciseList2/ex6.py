@@ -1,16 +1,39 @@
 '''
-6 - Faça um Programa que leia três números e mostre o maior deles.
+Atividade 6
+
+Escreva um programa que leia um valor inteiro e calcule o seu quadrado
 '''
+import os
 
-#variáveis
-num_1 = float(input('Informe o primeiro número? '))
-num_2 = float(input('Qual o segundo número? '))
-num_3 = float(input('Qual o terceiro número? '))
+while True:
+    try:
+        # Capitura as entradas do usuário
+        value = int(input("insira um valor: "))
 
-#comparando o 1ª, 2ª e 3ª números e informando o maior
-if num_1 > num_2 and num_1 > num_3:
-    print(f'Dos números informados o "{num_1:.0f}" é o maior deles')
-elif num_2 > num_1 and num_2 > num_3:
-    print(f'Dos números informados o "{num_2:.0f}" é o maior deles')
-else:
-    print(f'Dos números informados o "{num_3:.0f}" é o maior deles')
+        # Mostra na tela o resutado
+        print(f"Você dígito {value} e seu quadrado é {value*value}")
+
+        # Canselar o loop
+        break
+
+    # Tratamento de erros com valor de argumento inadequado
+    except (ValueError):
+        # Limpar a tela
+        os.system("clear")
+
+        print("="*80)
+
+        # Mostra mensagem de erro em cor vermelha e centralizado
+        print("{}Erro: só é permitido números inteiros {}".format(
+            '\033[31m', '\033[m').center(80))
+        print("="*80)
+
+
+    # Tratamento de erro de interupção
+    except(KeyboardInterrupt, EOFError):
+
+        # Limpar a telar
+        os.system("clear") or None
+
+        # Canselar o loop
+        break

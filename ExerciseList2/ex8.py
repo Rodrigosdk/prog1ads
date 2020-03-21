@@ -1,28 +1,38 @@
 '''
-8 - Faça um programa que pergunte o preço de três produtos
-e informe qual produto você deve comprar,
-sabendo que a decisão é sempre pelo mais barato.
+Atividade 8
+
+Escreva um programa que leia um valor inteiro e calcule o seu cubo.
 '''
+import os
 
-#variáveis
-prod_1 = float(input('Informe o primeiro preço? R$ '))
-prod_2 = float(input('Qual o segundo preço? R$ '))
-prod_3 = float(input('Qual o terceiro preço? R$ '))
+while True:
+    try:
+        # Capitura as entradas do usuário
+        value = int(input("Insira um valor: "))
 
-#comparando os preços 1ª, 2ª e 3ª informando o mais barato a ser comprado
+        # Mostra na tela o resutado
+        print(f"Você dígito {value} e seu cubo é {value**3}")
 
-if prod_1 == prod_2 == prod_3:
-    print('Todos os preços são iguais!!')
-else:
-    if prod_1 < prod_2 < prod_3:
-        print('O produto 1 é os mais baratos!!')
-    elif prod_1 == prod_2 < prod_3:
-        print('O produto 1 e 2 são os mais baratos!!')
-    elif prod_1 == prod_3 < prod_2:
-        print('O produto 1 e 3 são os mais baratos!!')
-    if prod_2 < prod_1 < prod_3:
-        print('O produto 2 é os mais baratos!!')
-    elif prod_2 == prod_3 < prod_1:
-        print('O produto 2 e 3 são os mais baratos!!')
-    if prod_3 < prod_2 < prod_1:
-        print('O produto 3 é os mais baratos!!')
+        # Canselar o loop
+        break
+
+    # Tratamento de erros com valor de argumento inadequado
+    except (ValueError):
+        # Limpar a tela
+        os.system("clear")
+
+        print("="*80)
+
+        # Mostra mensagem de erro em cor vermelha e centralizado
+        print("{}Erro: Erro: só é permitido números inteiros {}".format(
+            '\033[31m', '\033[m').center(80))
+        print("="*80)
+
+    # Tratamento de erro de interupção
+    except(KeyboardInterrupt, EOFError):
+
+        # Limpar a telar
+        os.system("clear") or None
+
+        # Canselar o loop
+        break
