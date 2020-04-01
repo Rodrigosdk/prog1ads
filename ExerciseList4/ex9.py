@@ -22,7 +22,7 @@ while True:
         print("="*80)
 
         # Mostra mensagem de erro em cor vermelha e centralizado
-        print("{}Erro: Erro: só é permitido números e pontos {}".format(
+        print("{}Erro: Erro: só é permitido números inteiros {}".format(
             '\033[31m', '\033[m').center(80))
         print("="*80)
 
