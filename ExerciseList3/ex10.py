@@ -4,17 +4,41 @@ Peça para digitar M-matutino ou V-Vespertino ou N- Noturno.
 Imprima a mensagem "Bom Dia!", "Boa Tarde!"
  ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
 '''
+import os
 
-# variáveis
-turno = str(input('Em que turno você estuda, digite "M" matutino ou "V" Vespertino ou "N" Noturno? ')).strip().upper()
+while True:
+    try:
+        # Capitura as entradas do usuário
+        shift = str(input(
+            'Em que turno você estuda, digite "M" matutino ou "V" Vespertino ou "N" Noturno? ')).upper()
 
-# informando o turo que estuda
+    # Tratamento de erro de interupção
+    except(KeyboardInterrupt, EOFError):
+        # Limpar a telar
+        os.system("clear") or None
 
-if turno == 'M':
-    print('Bom Dia!')
-elif turno == 'V':
-    print('Boa Tarde!')
-elif turno == 'N':
-    print('Boa Noite!')
-else:
-    print('Valor Inválido!')
+        # Canselar o loop
+        break
+
+    # Informando o turo que estuda
+
+    if shift == 'M':
+        print('Bom Dia!')
+
+        # Canselar o loop
+        break
+
+    elif shift == 'V':
+        print('Boa Tarde!')
+
+        # Canselar o loop
+        break
+
+    elif shift == 'N':
+        print('Boa Noite!')
+
+        # Canselar o loop
+        break
+
+    else:
+        print('Valor Inválido!')
