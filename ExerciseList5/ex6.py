@@ -8,7 +8,7 @@ mostre os números um ao lado do outro.
 cont = 0
 
 # Valida as entradas
-while cont != 10:
+while cont != 20:
     cont += 1   
     print(cont)
     
@@ -16,6 +16,6 @@ while cont != 10:
 cont = 0
 
 # Valida as entradas
-while cont != 10:
+while cont != 20:
     cont += 1
     print(cont, end=' ')
