@@ -7,8 +7,11 @@ import os
 while True:
     try:
         # Capitura as entradas do usuário
-        sex = str(input(
+        gender = str(input(
             'Informe seu sexo ditando "M" para masculido e "F" para feminino: ')).upper()
+
+        gender_dict = {'M': 'O sexo informado foi Masculino',
+                       'F': 'O sexo informado foi Feminino'}
 
     # Tratamento de erro de interupção
     except(KeyboardInterrupt, EOFError):
@@ -19,9 +22,7 @@ while True:
         break
 
     # comparando se o sexo informado foi masculino ou feminino
-    if sex == 'M':
-        print('O sexo informado foi Masculino')
-    elif sex == 'F':
-        print('O sexo informado foi Feminino')
+    if gender in gender_dict:
+        print(gender_dict[gender])
     else:
-        print('O sexo informado inválido digite novamente')
+        print('O sexo informado é inválido digite novamente')
