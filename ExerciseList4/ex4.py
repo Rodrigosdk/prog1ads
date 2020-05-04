@@ -13,6 +13,16 @@ se o conceito for A, B ou C ou "REPROVADO" se o conceito for D ou E.
 '''
 import os
 
+
+def printoutput(note_1, note_2, average, type_note):
+
+    print(f"primeira nota:{note_1}")
+    print(f"segunda nota: {note_2}")
+    print(f"sua média foi {average}")
+    print(f"conceito: {type_note}")
+    print('Parabéns você está APROVADO!')
+
+
 while True:
     try:
         # Capitura as entradas do usuário
@@ -23,36 +33,16 @@ while True:
         average = (note_1 + note_2) / 2
 
         # mensagemde Aprovação Reprovação e Distição
-        if average >= 9 and average == 10:
-            print(f"primeira nota:{note_1}")
-            print(f"primeira segunda nota: {note_2}")
-            print(f"sua média foi {average}")
-            print(f"conceito: A")
-            print(f'Parabéns você está APROVADO!')
+        if average >= 9 and average <= 10:
+            printoutput(note_1, note_2, average, 'A')
         elif average >= 7.5 < 9:
-            print(f"primeira nota:{note_1}")
-            print(f"primeira segunda nota: {note_2}")
-            print(f"sua média foi {average}")
-            print(f"conceito: B")
-            print(f'Parabéns você está APROVADO!')
+            printoutput(note_1, note_2, average, 'B')
         elif average >= 6 < 7.5:
-            print(f"primeira nota:{note_1}")
-            print(f"primeira segunda nota: {note_2}")
-            print(f"sua média foi {average}")
-            print(f"conceito: D")
-            print(f'Parabéns você está APROVADO!')
+            printoutput(note_1, note_2, average, 'C')
         elif average >= 4 < 6:
-            print(f"primeira nota:{note_1}")
-            print(f"primeira segunda nota: {note_2}")
-            print(f"sua média foi {average}")
-            print(f"conceito: E")
-            print(f'você está REPROVADO!')
+            printoutput(note_1, note_2, average, 'D')
         elif average > 4:
-            print(f"primeira nota:{note_1}")
-            print(f"primeira segunda nota: {note_2}")
-            print(f"sua média foi {average}")
-            print(f"conceito: F")
-            print(f'você está REPROVADO!')
+            printoutput(note_1, note_2, average, 'E')
 
         # Canselar o loop
         break
@@ -65,7 +55,7 @@ while True:
         print("="*80)
 
         # Mostra mensagem de erro em cor vermelha e centralizado
-        print("{}Erro: Erro: só é permitido números e pontos {}".format(
+        print("{}Erro: Erro: só é permitido números e ponto {}".format(
             '\033[31m', '\033[m').center(80))
         print("="*80)
 
