@@ -6,7 +6,7 @@ import os
 while True:
     try:
         # Capitura as entradas do usuário
-        letter = str(input('Informe uma letra qualquer: ')).upper()
+        letter = input('Informe uma letra qualquer: ').upper()
 
         # define as lista com as vogais e consoantes
         vowel = ['A', 'E', 'I', 'O', 'U']

@@ -9,9 +9,11 @@ import os
 while True:
     try:
         # Capitura as entradas do usuário
-        shift = str(input(
-            'Em que turno você estuda, digite "M" matutino ou "V" Vespertino ou "N" Noturno? ')).upper()
+        time = input(
+            'Em que turno você estuda, digite "M" matutino ou "V" Vespertino ou "N" Noturno: ').upper()
 
+        time_dict = {'M': 'Bom Dia!', 'V': 'Boa Tarde!', 'N': 'Boa Noite!'}
+    
     # Tratamento de erro de interupção
     except(KeyboardInterrupt, EOFError):
         # Limpar a telar
@@ -21,24 +23,10 @@ while True:
         break
 
     # Informando o turo que estuda
-
-    if shift == 'M':
-        print('Bom Dia!')
-
-        # Canselar o loop
-        break
-
-    elif shift == 'V':
-        print('Boa Tarde!')
+    if time in time_dict:
+        print(time_dict[time])
 
         # Canselar o loop
         break
-
-    elif shift == 'N':
-        print('Boa Noite!')
-
-        # Canselar o loop
-        break
-
     else:
         print('Valor Inválido!')

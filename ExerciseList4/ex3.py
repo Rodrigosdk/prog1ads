@@ -9,28 +9,14 @@ while True:
     try:
         # Capitura as entradas do usuário
         date = int(input("Insira um numero: "))
+        data_dict = {1: 'Domingo', 2: 'Segunda-feira', 3: 'Terça-feira',
+                     4: 'Quarta-feira', 5: 'Quinta-feira', 6: 'Sexta-feira', 
+                     7: 'Sábado'}
 
-        if date == 1:
+        if date in data_dict:
             # Mostra na tela o resutado
-            print(f"{date}-Domingo")
-        if date == 2:
-            # Mostra na tela o resutado
-            print(f"{date}-segunda-feira")
-        if date == 3:
-            # Mostra na tela o resutado
-            print(f"{date}-Terça-feira")
-        if date == 4:
-            # Mostra na tela o resutado
-            print(f"{date}-Quarta-feira")
-        if date == 5:
-            # Mostra na tela o resutado
-            print(f"{date}-Quinta-feira")
-        if date == 6:
-            # Mostra na tela o resutado
-            print(f"{date}-Sexta-feira")
-        if date == 7:
-            # Mostra na tela o resutado
-            print(f"{date}-Sábado")
+            print(data_dict[date])
+
         else:
             print("valor invalido")
 
@@ -45,7 +31,7 @@ while True:
         print("="*80)
 
         # Mostra mensagem de erro em cor vermelha e centralizado
-        print("{}Erro: Erro: só é permitido números e pontos {}".format(
+        print("{}Erro: Erro: só é permitido números inteiros{}".format(
             '\033[31m', '\033[m').center(80))
         print("="*80)
 
