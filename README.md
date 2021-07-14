@@ -1,2 +1,2 @@
 # progr1ads
-programas do primeiro periodo da linguagem python
+Programas do primeiro período
